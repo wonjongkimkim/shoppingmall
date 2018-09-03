@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="OrderDetail">
+    <resultMap id="resultOrderDetailVO" type="com.kwj.shoppingmall.vo.OrderDetailVO">
+        <id property="id" column="id" />
+        <result property="quantity" column="quantity"/>
+        <result property="productId" column="productsid"/>
+        <result property="orderId" column="orderid"/>
+        <result property="productName" column="productname"/>
+        <result property="price" column="price"/>
+        <result property="color" column="color" />
+        <result property="image" column="image"/>
+        <result property="size" column="size"/>
+        <result property="brandName" column="brandname"/>
+ 
+    </resultMap>
+
+	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.OrderDetailVO">
+		INSERT INTO orders_detail ( quantity, productsid, orderid, productname, price, color, image, size, brandname)
+			VALUES ( #{quantity}, #{productId}, #{orderId}, #{productName}, #{price}, #{color}, #{image}, #{size}, #{brandName})
+	</insert>
+
+    <select id="selectList" parameterType="java.util.HashMap" resultMap="resultOrderDetailVO">
+        SELECT * FROM orders_detail LIMIT 10
+    </select>
+    
+    <update id="update" parameterType="com.kwj.shoppingmall.vo.OrderDetailVO">
+    	UPDATE orders_detail SET
+    		,price = #{price}
+    		,productname = #{productName}
+    		,color = #{color}
+    		,size = #{size}
+    		,brandname = #{brandName}
+    		,image = #{image}
+    		,quantity = #{quantity}
+    	WHERE
+    		orderid = #{orderId}
+    </update>
+    
+     <delete id="delete" parameterType="int">
+     	DELETE from orders_detail WHERE orderid = #{orderId}
+     </delete>
+    
+
+</mapper>

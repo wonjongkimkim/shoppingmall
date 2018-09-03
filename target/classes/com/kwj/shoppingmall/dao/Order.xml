@@ -4,8 +4,7 @@
 <mapper namespace="Order">
     <resultMap id="resultOrderVO" type="com.kwj.shoppingmall.vo.OrderVO">
         <id property="id" column="id" />
-        <result property="price" column="price"/>
-        <result property="memo" column="memo"/>
+        <result property="orderMemo" column="memo"/>
         <result property="orderDate" column="orderdate"/>
         <result property="address" column="address"/>
         <result property="name" column="name"/>
@@ -20,9 +19,9 @@
         
     </resultMap>
 
-	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.UserVO">
-		INSERT INTO users ( price, memo, orderDate, address, name, phone, usersid, productname, color, size, brandname, image, quantity )
-			VALUES ( #{price}, #{memo}, #{orderDate}, #{address}, #{name}, #{phone}, #{userId}, #{productName}, #{color}, #{size}, #{brandName}, 
+	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.OrderVO">
+		INSERT INTO orders ( memo, orderDate, address, name, phone, usersid, productname, color, size, brandname, image, quantity )
+			VALUES ( #{orderMemo}, #{orderDate}, #{address}, #{name}, #{phone}, #{userId}, #{productName}, #{color}, #{size}, #{brandName}, 
 					#{image}, #{quantity})
 	</insert>
 
@@ -32,8 +31,7 @@
     
     <update id="update" parameterType="com.kwj.shoppingmall.vo.OrderVO">
     	UPDATE orders SET
-    		price = #{price}
-    		,memo = #{memo}
+    		memo = #{memo}
     		,orderDate = #{orderDate}
     		,address = #{address}
     		,name = #{name}
@@ -49,8 +47,8 @@
     		id = #{id}
     </update>
     
-     <delete id="delete" parameterType="String">
-     	DELETE from orders WHERE usersid = #{userId}
+     <delete id="delete" parameterType="int">
+     	DELETE from orders WHERE id = #{id}
      </delete>
     
 

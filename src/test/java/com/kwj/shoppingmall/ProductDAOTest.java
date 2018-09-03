@@ -28,14 +28,14 @@ public class ProductDAOTest {
 	@Test
 	public void insert() {
 		ProductVO productVO = new ProductVO();
-		productVO.setName("echo bag");
+		productVO.setName("pants");
 		productVO.setAmount(1001);
 		productVO.setColor("red");
 		productVO.setPrice(1000);
 		productVO.setImage(null);
 		productVO.setCategory("bag");
 		productVO.setSize(null);
-		productVO.setBrandName("Hyundai");
+		productVO.setBrandName("samsung");
 		productDAO.insert(productVO);
 	}
 	

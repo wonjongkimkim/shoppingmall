@@ -19,6 +19,8 @@
         SELECT * FROM review LIMIT 10
     </select>
     
+
+    
     <update id = "update" parameterType = "com.kwj.shoppingmall.vo.ReviewVO">
     	UPDATE review SET
     		contents = #{contents}

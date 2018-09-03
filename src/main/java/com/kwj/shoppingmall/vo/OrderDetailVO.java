@@ -2,8 +2,8 @@ package com.kwj.shoppingmall.vo;
 
 public class OrderDetailVO {
 	private int quantity;
-	private String productId;
-	private String orderId;
+	private int productId;
+	private int orderId;
 	private String color;
 	private String size;
 	private String brandName;
@@ -16,16 +16,16 @@ public class OrderDetailVO {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
-	public String getOrderId() {
+	public int getOrderId() {
 		return orderId;
 	}
-	public void setOrderId(String orderId) {
+	public void setOrderId(int orderId) {
 		this.orderId = orderId;
 	}
 	public String getColor() {

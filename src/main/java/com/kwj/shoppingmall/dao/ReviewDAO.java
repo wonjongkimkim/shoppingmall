@@ -25,8 +25,11 @@ public class ReviewDAO extends SqlSessionDaoSupport{
 		getSqlSession().update("Review.update" , reviewVO);
 	}
 	
+
+	
 	
 	public void delete(int id) {
 		getSqlSession().delete("Review.delete",id);
 	}
+	
 }

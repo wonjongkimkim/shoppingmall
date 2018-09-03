@@ -23,6 +23,10 @@ public class UserDAO extends SqlSessionDaoSupport{
 		return getSqlSession().selectList("User.selectList" , paramMap);
 	}
 	
+	public UserVO select(String id) {
+		return getSqlSession().selectOne("User.select", id);
+	}
+	
 	public void update(UserVO userVO) {
 		getSqlSession().update("User.update" , userVO);
 	}

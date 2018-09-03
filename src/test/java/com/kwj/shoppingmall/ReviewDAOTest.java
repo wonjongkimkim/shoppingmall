@@ -24,8 +24,8 @@ public class ReviewDAOTest {
 	public void insert() {
 		ReviewVO reviewVO = new ReviewVO();
 		reviewVO.setContents("Not good!");
-		reviewVO.setUserId("2012003352");
-		reviewVO.setProductId(123457);
+		reviewVO.setUserId("2012003350");
+		reviewVO.setProductId(2);
 		reviewDAO.insert(reviewVO);
 	}
 	

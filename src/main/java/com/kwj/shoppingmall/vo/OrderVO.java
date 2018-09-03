@@ -7,7 +7,7 @@ public class OrderVO {
 	private String orderDate;
 	private String name;
 	private String address;
-	private String phoneNumber;
+	private String phone;
 	private String userId;
 	private String productName;
 	private String color;
@@ -51,11 +51,12 @@ public class OrderVO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getPhoneNumber() {
-		return phoneNumber;
+
+	public String getPhone() {
+		return phone;
 	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getUserId() {
 		return userId;
