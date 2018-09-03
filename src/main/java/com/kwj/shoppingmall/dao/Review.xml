@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="Review">
+    <resultMap id="resultReviewVO" type="com.kwj.shoppingmall.vo.ReviewVO">
+        <id property="id" column="id" />
+        <result property="contents" column="contents"/>
+        <result property="userId" column="usersid"/>
+        <result property="productId" column="productsid"/>
+   
+    </resultMap>
+
+	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.ReviewVO">
+		INSERT INTO review ( contents, usersid, productsid )
+			VALUES ( #{contents}, #{userId}, #{productId})
+	</insert>
+
+    <select id="selectList" parameterType="java.util.HashMap" resultMap="resultReviewVO">
+        SELECT * FROM review LIMIT 10
+    </select>
+    
+    <update id = "update" parameterType = "com.kwj.shoppingmall.vo.ReviewVO">
+    	UPDATE review SET
+    		contents = #{contents}
+    	WHERE id = #{id}
+    </update>
+
+	<delete id = "delete" parameterType = "int">
+		DELETE from review WHERE id = #{id}  
+	</delete>
+</mapper>

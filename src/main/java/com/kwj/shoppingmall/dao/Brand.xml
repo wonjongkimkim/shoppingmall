@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="Brand">
+    <resultMap id="resultBrandVO" type="com.kwj.shoppingmall.vo.BrandVO">
+        <id property="id" column="id" />
+        <result property="name" column="name"/>
+        <result property="image" column="image"/>
+        <result property="description" column="description"/>
+    </resultMap>
+
+	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.BrandVO">
+		INSERT INTO brand ( name, image, description )
+			VALUES ( #{name}, #{image}, #{description})
+	</insert>
+
+    <select id="selectList" parameterType="java.util.HashMap" resultMap="resultBrandVO">
+        SELECT * FROM brand LIMIT 10
+    </select>
+    
+    <update id = "update" parameterType = "com.kwj.shoppingmall.vo.BrandVO">
+    	UPDATE brand SET
+    		image = #{image}
+    		,description = #{description}
+    	WHERE name = #{name}
+    </update>
+
+	<delete id = "delete" parameterType = "String">
+		DELETE from brand WHERE name = #{name}  
+	</delete>
+</mapper>

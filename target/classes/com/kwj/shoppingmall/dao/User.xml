@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="User">
+    <resultMap id="resultUserVO" type="com.kwj.shoppingmall.vo.UserVO">
+        <id property="id" column="id" />
+        <result property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="email" column="email"/>
+        <result property="address" column="address"/>
+        <result property="passwd" column="passwd"/>
+        <result property="phone" column="phone"/>
+        <result property="country" column="country" />
+        <result property="date" column="date"/>
+    </resultMap>
+
+	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.UserVO">
+		INSERT INTO users ( id, username, email, address, passwd, phone, country, date )
+			VALUES ( #{id}, #{username}, #{email}, #{address}, #{passwd}, #{phone}, #{country}, #{date})
+	</insert>
+
+    <select id="selectList" parameterType="java.util.HashMap" resultMap="resultUserVO">
+        SELECT * FROM users LIMIT 10
+    </select>
+    
+    <update id="update" parameterType="com.kwj.shoppingmall.vo.UserVO">
+    	UPDATE users SET
+    		username = #{username}
+    		,email = #{email}
+    		,address = #{address}
+    		,passwd = #{passwd}
+    		,phone = #{phone}
+    		,country = #{country}
+    		,date = #{date}
+    	WHERE
+    		id = #{id}
+    </update>
+    
+     <delete id="delete" parameterType="String">
+     	DELETE from users WHERE id = #{id}
+     </delete>
+    
+
+</mapper>

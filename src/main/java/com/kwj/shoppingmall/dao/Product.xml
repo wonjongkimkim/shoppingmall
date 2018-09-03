@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="Product">
+    <resultMap id="resultProductVO" type="com.kwj.shoppingmall.vo.ProductVO">
+        <id property="id" column="id" />
+        <result property="name" column="name"/>
+        <result property="amount" column="amount"/>
+        <result property="color" column="color"/>
+        <result property="price" column="price"/>
+        <result property="image" column="image"/>
+        <result property="category" column="category" />
+        <result property="size" column="size"/>
+        <result property="brandName" column="brandName"/>
+    </resultMap>
+
+	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.ProductVO">
+		INSERT INTO products ( name, amount, color, price, image, category, size, brandName )
+			VALUES ( #{name}, #{amount}, #{color}, #{price}, #{image}, #{category}, #{size}, #{brandName})
+	</insert>
+
+    <select id="selectList" parameterType="java.util.HashMap" resultMap="resultProductVO">
+        SELECT * FROM products LIMIT 10
+    </select>
+    
+    <select id="select" parameterType="int"  resultMap ="resultProductVO">
+        SELECT * FROM products WHERE id = #{id}
+    </select>
+    
+    <update id="update" parameterType="com.kwj.shoppingmall.vo.ProductVO">
+    	UPDATE products SET
+    		name = #{name}
+    		,amount = #{amount}
+    		,color = #{color}
+    		,price = #{price}
+    		,image = #{image}
+    		,category = #{category}
+    		,size = #{size}
+    		,brandName = #{brandName}
+    	WHERE
+    		id = #{id}
+    </update>
+    
+     <delete id="delete" parameterType="int">
+     	DELETE from products WHERE id = #{id}
+     </delete>
+    
+
+</mapper>

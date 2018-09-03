@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="Order">
+    <resultMap id="resultOrderVO" type="com.kwj.shoppingmall.vo.OrderVO">
+        <id property="id" column="id" />
+        <result property="price" column="price"/>
+        <result property="memo" column="memo"/>
+        <result property="orderDate" column="orderdate"/>
+        <result property="address" column="address"/>
+        <result property="name" column="name"/>
+        <result property="phone" column="phone" />
+        <result property="userId" column="usersid"/>
+        <result property="productName" column="productname"/>
+        <result property="color" column="color"/>
+        <result property="size" column="size"/>
+        <result property="brandName" column="brandname"/>
+        <result property="image" column="image"/>
+        <result property="quantity" column="quantity"/>
+        
+    </resultMap>
+
+	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.UserVO">
+		INSERT INTO users ( price, memo, orderDate, address, name, phone, usersid, productname, color, size, brandname, image, quantity )
+			VALUES ( #{price}, #{memo}, #{orderDate}, #{address}, #{name}, #{phone}, #{userId}, #{productName}, #{color}, #{size}, #{brandName}, 
+					#{image}, #{quantity})
+	</insert>
+
+    <select id="selectList" parameterType="java.util.HashMap" resultMap="resultOrderVO">
+        SELECT * FROM orders LIMIT 10
+    </select>
+    
+    <update id="update" parameterType="com.kwj.shoppingmall.vo.OrderVO">
+    	UPDATE orders SET
+    		price = #{price}
+    		,memo = #{memo}
+    		,orderDate = #{orderDate}
+    		,address = #{address}
+    		,name = #{name}
+    		,phone = #{phone}
+    		,usersid = #{userId}
+    		,productname = #{productName}
+    		,color = #{color}
+    		,size = #{size}
+    		,brandname = #{brandName}
+    		,image = #{image}
+    		,quantity = #{quantity}
+    	WHERE
+    		id = #{id}
+    </update>
+    
+     <delete id="delete" parameterType="String">
+     	DELETE from orders WHERE usersid = #{userId}
+     </delete>
+    
+
+</mapper>
