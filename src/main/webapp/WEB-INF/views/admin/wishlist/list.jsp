@@ -51,7 +51,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tables</h1>
+                    <h1 class="page-header">상품 목록</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -68,23 +68,29 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>아이디</th>
-                                        <th>이름</th>
+                                        <th>상품 이름</th>
+                                        <th>주문수량</th>
+                                        <th>이미지</th>
+                                        <th>색상</th>
+                                        <th>사이즈</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
-<c:forEach items="${userList}" var = "userVO">
+<c:forEach items="${wishList}" var = "wishListVO">
                                     <tr class="odd gradeX">
-                                        <td>${userVO.id}</td>
-                                        <td><a href="/admin/users/info?id=${userVO.id }">${userVO.username}</a></td>
-
+                                        <td>${wishListVO.productId}</td>
+                                        <td>${wishListVO.quantity}</td>
+                                        <td><img width = "100" src = "/img/${wishListVO.image} "></td>
+                                        <td>${wishListVO.color}</td>
+                                        <td>${wishListVO.size}</td>
+										
                                     </tr>
 </c:forEach>
                                 </tbody>
                                 
                             </table>
-                             <a href = "add" button type="button" class="btn btn-success">회원 가입</a>
+                             <a href = "add" button type="button" class="btn btn-success">상품 추가</a>
                               
                            
                         </div>

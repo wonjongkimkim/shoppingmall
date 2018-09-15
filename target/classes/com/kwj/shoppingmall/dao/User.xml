@@ -10,13 +10,12 @@
         <result property="address" column="address"/>
         <result property="passwd" column="passwd"/>
         <result property="phone" column="phone"/>
-        <result property="country" column="country" />
         <result property="date" column="date"/>
     </resultMap>
 
 	<insert id="insert" parameterType="com.kwj.shoppingmall.vo.UserVO">
-		INSERT INTO users ( id, username, email, address, passwd, phone, country, date )
-			VALUES ( #{id}, #{username}, #{email}, #{address}, #{passwd}, #{phone}, #{country}, #{date})
+		INSERT INTO users ( id, username, email, address, passwd, phone, date )
+			VALUES ( #{id}, #{username}, #{email}, #{address}, #{passwd}, #{phone}, #{date})
 	</insert>
 
     <select id="selectList" parameterType="java.util.HashMap" resultMap="resultUserVO">
@@ -34,7 +33,6 @@
     		,address = #{address}
     		,passwd = #{passwd}
     		,phone = #{phone}
-    		,country = #{country}
     		,date = #{date}
     	WHERE
     		id = #{id}

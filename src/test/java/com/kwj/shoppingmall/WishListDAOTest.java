@@ -30,11 +30,11 @@ public class WishListDAOTest {
 	public void insert() {
 		WishListVO wishListVO = new WishListVO();
 		ProductVO productVO = new ProductVO();
-		productVO = productDAO.select(123457);
+		productVO = productDAO.select(6);
 		wishListVO.setProductId(productVO.getId());
-		wishListVO.setProductId(123457);
+		wishListVO.setProductId(6);
 		wishListVO.setQuantity(3);
-		wishListVO.setUserId("2012003352");
+		wishListVO.setUserId("twice");
 		wishListVO.setColor(productVO.getColor());
 		wishListVO.setPrice(productVO.getPrice());
 		wishListVO.setImage(productVO.getImage());

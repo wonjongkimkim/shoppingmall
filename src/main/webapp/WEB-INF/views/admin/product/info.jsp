@@ -45,19 +45,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                    	<a href = "/admin/users/list"> 
-                    	<button type="button" class="btn btn-primary">목록</button></a>
+                    	<a href = "/admin/product/list"> 
+                    	<button type="button" class="btn btn-primary">상품 목록</button></a>
                   
-                    	<a href="/admin/users/update?id=${userVO.id}">
-                    	<button type="button" class="btn btn-primary">회원 수정</button></a>
                     	
-                    	<a href="/admin/users/delete?id=${userVO.id}">
-                    	<button type="button" class="btn btn-primary">회원 삭제</button></a>
+                    	<a href="/admin/product/delete?id=${productVO.id}">
+                    	<button type="button" class="btn btn-primary">상품 삭제</button></a>
                     	
-                    	<a href="/admin/wishlist/list?id=${userVO.id}">
-                    	<button type="button" class="btn btn-primary">카트</button></a>
+                    	<a href="/admin/wishlist/add?id=${sessionId}&productId=${productVO.id}">
+                    	<button type="button" class="btn btn-primary">카트에 담기</button></a>
                     </h1>
-                </div>
+                </div> 
                 
                 
                 <!-- /.col-lg-12 -->
@@ -68,10 +66,10 @@
              <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           	아이디
+                           	상품 번호
                         </div>
                         <div class="panel-body">   
-                       ${userVO.id}
+                       ${productVO.id}
                         </div>
                      
                     </div>
@@ -79,10 +77,10 @@
                 <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           	주소
+                           	상품 이름
                         </div>
                         <div class="panel-body">   
-                       ${userVO.address}
+                       ${productVO.name}
                         </div>
                      
                     </div>
@@ -91,10 +89,10 @@
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            	번호
+                            	가격
                         </div>
                         <div class="panel-body">
-                            <p> ${userVO.phone}</p>
+                            <p> ${productVO.price}</p>
                         </div>
                     
                     </div>
@@ -107,10 +105,10 @@
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                           	이메일
+                           	남은 수량
                         </div>
                         <div class="panel-body">
-                         ${userVO.email}
+                         ${productVO.amount}
                         </div>
                    
                     </div>
@@ -121,10 +119,10 @@
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                           	회원가입일
+                           	상품 카테고리
                         </div>
                         <div class="panel-body">
-                         ${userVO.date}
+                         ${productVO.category}
                         </div>
                    
                     </div>
@@ -133,10 +131,23 @@
                 <div class="col-lg-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                           	이름
+                           	브랜드
                         </div>
                         <div class="panel-body">
-                         ${userVO.username}
+                         ${productVO.brandName}
+                        </div>
+                   
+                    </div>
+                    
+                </div>
+                 <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                           	이미지
+                        </div>
+                        <div class="panel-body">
+                         <img width = 100 src= "/img/${productVO.image}"  >
+
                         </div>
                    
                     </div>

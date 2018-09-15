@@ -18,6 +18,7 @@
 	<resources mapping="/css/**" location="/resources/css/" />
 	<resources mapping="/fonts/**" location="/resources/fonts/" />
 	<resources mapping="/js/**" location="/resources/js/" />
+	<resources mapping="/img/**" location="file:C:/Users/kimwonjong/pic"/>
 
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
@@ -52,6 +53,11 @@
 	
 	<beans:bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<beans:constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="defaultEncoding" value="UTF-8"/>
+		<beans:property name="maxUploadSize" value="20000000" />
 	</beans:bean>
 	
 	<beans:bean id="UserVO" class="com.kwj.shoppingmall.vo.UserVO"></beans:bean>

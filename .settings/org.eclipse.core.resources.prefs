@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/admin/users/delete.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/users/header.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/users/list.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/users/side.jsp=UTF-8
 encoding/<project>=UTF-8

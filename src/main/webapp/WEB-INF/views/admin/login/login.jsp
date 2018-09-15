@@ -1,5 +1,5 @@
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,13 +44,13 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" method="post" action="doLogin">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="id" name="id" type="id" autofocus>
+                                    <input class="form-control" placeholder="아이디를 입력하세요" name="id" type="type" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="passwd" type="passwd" value="">
+                                    <input class="form-control" placeholder="비밀번호를 입력하세요." name="passwd" type="password" value="">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -58,7 +58,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="list" class="btn btn-lg btn-success btn-block">Login</a>
+                                <button type="submit" class="btn btn-lg btn-success btn-block">로그인</button>
                             </fieldset>
                         </form>
                     </div>

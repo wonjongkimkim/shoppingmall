@@ -25,7 +25,7 @@ public class BrandDAOTest {
 	@Test
 	public void insert() {
 		BrandVO brandVO = new BrandVO();
-		brandVO.setName("Samsung");
+		brandVO.setName("나이키");
 		brandVO.setDescription("No1");
 		brandVO.setImage(null);
 		brandDAO.insert(brandVO);

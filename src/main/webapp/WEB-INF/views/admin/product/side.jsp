@@ -15,12 +15,12 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="add"><i class="fa fa-dashboard fa-fw"></i> 회원가입</a>
+                            <a href="../users/add"><i class="fa fa-dashboard fa-fw"></i> 회원가입</a>
                         </li>
                          
                         <li>
-                            <a href="../product/list"><i class="fa fa-bar-chart-o fa-fw"></i> 상품<span class="fa arrow"></span></a>
-                            
+                            <a href="list"><i class="fa fa-bar-chart-o fa-fw"></i> 상품<span class="fa arrow"></span></a>
+                          
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
