@@ -53,6 +53,12 @@ public class WishListDAOTest {
 	}
 	
 	@Test
+	public void select() {
+		List<WishListVO> wishListVO = wishListDAO.select("2012003351");
+		
+	}
+	
+	@Test
 	public void update() {
 		WishListVO wishListVO = new WishListVO();
 		wishListVO.setProductId(123457);

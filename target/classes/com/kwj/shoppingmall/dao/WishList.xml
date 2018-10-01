@@ -24,11 +24,16 @@
         SELECT * FROM  wish_list LIMIT 10
     </select>
     
+    <select id="select" parameterType="String"  resultMap ="resultWishListVO">
+        SELECT * FROM wish_list WHERE usersid = #{userId}
+    </select>
+    
     <update id = "update" parameterType = "com.kwj.shoppingmall.vo.WishListVO">
     	UPDATE wish_list SET
     		quantity = #{quantity}
     	WHERE productsid = #{productId}
     </update>
+    
 
 	<delete id = "delete" parameterType = "int">
 		DELETE from wish_list WHERE productsid = #{productId}  

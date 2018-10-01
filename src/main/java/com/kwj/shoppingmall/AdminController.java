@@ -26,7 +26,7 @@ import com.kwj.shoppingmall.vo.UserVO;
  * Handles requests for the application home page.
  */
 @Controller
-@SessionAttributes({"sessionId","sessionUsername"})
+@SessionAttributes({"sessionId","sessionEmail"})
 public class AdminController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -40,14 +40,11 @@ public class AdminController {
 	 */
 	@RequestMapping(value = "/admin/users/list", method = RequestMethod.GET)
 	public String list(@ModelAttribute("sessionId") String sessionId,
-			@ModelAttribute("sessionId") String sessionUsername
+			@ModelAttribute("sessionId") String sessionEmail
 			, @RequestParam(value="id", defaultValue="") String id
 			,Locale locale, 
 			Model model) {
-		
-		if ( sessionId.equals("") ) {
-			return "redirect:/admin/login/login";
-		}
+
 		List<UserVO> userList = userDAO.selectList();
 		
 		model.addAttribute("userList", userList);
@@ -64,28 +61,72 @@ public class AdminController {
 	}
 	
 	@RequestMapping(value = "/admin/login/login", method = RequestMethod.GET)
-	public String login( @SessionAttribute(required = false, value = "sessionId")
-	String sessionId,Model model) {
-		System.out.println(sessionId);
+	public String login(
+			@SessionAttribute(required=false, value="sessionId") String sessionId
+			, Model model) {
+	
+		System.out.println("["+sessionId+"]");
+		if ( sessionId == null || sessionId.equals("") ) {
+			// 로그인이 안되어 있는 상
+		} else {
+			// 로그인이 되어이 있는 상태
+			return "redirect:/admin/users/list";
+		}
+		
 		return "admin/login/login";
+	}
+	
+	@RequestMapping(value = "/admin/login/reLogin", method = RequestMethod.GET)
+	public String reLogin(
+			@SessionAttribute(required=false, value="sessionId") String sessionId
+			, Model model) {
+	
+		
+		return "admin/login/reLogin";
 	}
 	
 	@RequestMapping(value = "/admin/login/doLogin", method = RequestMethod.POST)
 	public String doLogin(
-			@RequestParam("id") String id,
-			@RequestParam("passwd") String passwd,
-			Model model) {
+			@SessionAttribute(required=false, value="sessionId") String sessionId
+			, @RequestParam(value="id") String id
+			, @RequestParam(value="passwd") String passwd
+			, Model model) {
+		
+		
 		UserVO userVO = userDAO.select(id);
-		if(userVO.getPasswd().equals(passwd)) {
+	
+		if ( userVO == null ) {
+			// 다시 로그인을 하세요.
+			return "admin/login/reLogin";
+		}
+		
+		if ( userVO.getPasswd().equals(passwd) ) {
+			// 로그인 성공
 			model.addAttribute("sessionId", userVO.getId());
 			model.addAttribute("sessionEmail", userVO.getEmail());
 			
-			return "admin/login/doLogin";
-		}else {
-			model.addAttribute("sessionId","");
+			return "redirect:/admin/users/list";
+		} else
+		{
+			// 로그인 실패: 비밀번호가 다르니까.
+			model.addAttribute("sessionId", "");
 			model.addAttribute("sessionEmail", "");
 		}
-		return "redirct:admin/login/login";
+		
+		return "redirect:/admin/login/login";
+	}
+	
+	
+	@RequestMapping(value = "/admin/login/logout", method = RequestMethod.GET)
+	public String logout(
+			@ModelAttribute("sessionId") String sessionId
+			, Model model) {
+		
+		
+		model.addAttribute("sessionId", "");
+		model.addAttribute("sessionEmail", "");
+		
+		return "redirect:/admin/login/login";
 	}
 	
 
@@ -98,7 +139,7 @@ public class AdminController {
 	
 	@RequestMapping(value = "/admin/users/add", method = RequestMethod.GET)
 	public String add(@ModelAttribute("sessionId") String sessionId,
-			Locale locale, Model model) {
+			Model model) {
 		
 		return "admin/users/add";
 	}
@@ -173,14 +214,4 @@ public class AdminController {
 		model.addAttribute("email", email);
 		return "admin/users/doUpdate";
 	}
-	
-	
-	@RequestMapping(value = "/admin/login/logout", method = RequestMethod.GET)
-	public String logout( Model model) {
-		model.addAttribute("sessionId", "");
-		model.addAttribute("sessionEmail", "");
-		return "redirect:/admin/login/login";
-	}
-	
-	
 }

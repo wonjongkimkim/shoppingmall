@@ -1,3 +1,5 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,83 +50,38 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:forEach items="${wishList}" var = "wishListVO">
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
+								<a href=""><img height = 200 width=100 src= "/img/${wishListVO.image}" /></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
+								
+								<p>상품 번호: ${wishListVO.productId}</p>
 							</td>
 							<td class="cart_price">
-								<p>$59</p>
+								<p>${wishListVO.price}</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+									<a class="cart_quantity_up" href="addQuantity?id=${sessionId}&productId=${wishListVO.productId}"> + </a>
+									<input class="cart_quantity_input" type="text" name="quantity" value="${wishListVO.quantity} " autocomplete="off" size="2">
+									<a class="cart_quantity_down" href="minusQuantity?id=${sessionId}&productId=${wishListVO.productId}"> - </a>
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price"> ${ wishListVO.price*wishListVO.quantity} </p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="delete?id=${wishListVO.productId}"><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
+						
+						</c:forEach>
 
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/two.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/three.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
+						
 					</tbody>
+					<p class="cart_total_price">Total Price: ${total}</p>
 				</table>
 			</div>
 		</div>

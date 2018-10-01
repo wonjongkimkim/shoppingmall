@@ -74,4 +74,10 @@ public class ProductDAOTest {
 	public void delete() {
 		productDAO.delete(123456);
 	}
+	
+	@Test
+	public void selectByName() {
+		List<ProductVO> productList = productDAO.selectByName("티셔츠");
+	
+	}
 }

@@ -1,3 +1,6 @@
+	<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -5,8 +8,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								
+								${sessionId}님 
 							</ul>
 						</div>
 					</div>
@@ -60,9 +63,8 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="/checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="/cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="cart?id=${sessionId}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="/login.html"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -107,9 +109,19 @@
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
-						</div>
+						<div>
+						
+						<div class="col-lg-6">
+                                <!-- action은 데이터가 전송될 목적지를 가르킴-->
+                                    <form role="form" action ="./" method = "get">
+ 									<div class="form-group">
+                                            
+                                            <input type='text' name ="name"  type = "search" placeholder="상품 검색">
+                                           <button type="submit" class="btn btn-success">검색</button>
+                                        </div>
+                                       
+                                    </form>
+					
 					</div>
 				</div>
 			</div>

@@ -34,6 +34,10 @@ public class ProductDAO extends SqlSessionDaoSupport{
 	public void delete(int id) {
 		getSqlSession().delete("Product.delete",id);
 	}
+	
+	public List<ProductVO> selectByName(String name) {
+		return getSqlSession().selectList("Product.selectByName",name);
+	}
 }
 
 

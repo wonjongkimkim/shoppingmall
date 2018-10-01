@@ -1,3 +1,5 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,12 +147,12 @@
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
-									<li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
+									<li><a href=""> <span class="pull-right">(56)</span>GrÃ¼ne Erde</a></li>
 									<li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
 									<li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
 									<li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
 									<li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-									<li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+									<li><a href=""> <span class="pull-right">(4)</span>RÃ¶sch creative culture</a></li>
 								</ul>
 							</div>
 						</div><!--/brands_products-->
@@ -174,60 +176,29 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="images/product-details/1.jpg" alt="" />
+								<img src= "/img/${productVO.image}" alt="" />
 								<h3>ZOOM</h3>
 							</div>
-							<div id="similar-product" class="carousel slide" data-ride="carousel">
-								
-								  <!-- Wrapper for slides -->
-								    <div class="carousel-inner">
-										<div class="item active">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-										<div class="item">
-										  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-										  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-										</div>
-										
-									</div>
-
-								  <!-- Controls -->
-								  <a class="left item-control" href="#similar-product" data-slide="prev">
-									<i class="fa fa-angle-left"></i>
-								  </a>
-								  <a class="right item-control" href="#similar-product" data-slide="next">
-									<i class="fa fa-angle-right"></i>
-								  </a>
-							</div>
-
+						
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-								<p>Web ID: 1089772</p>
+								<h2>${productVO.name} </h2>
+								<p>Web ID: ${productVO.id} </p>
 								<img src="images/product-details/rating.png" alt="" />
 								<span>
-									<span>US $59</span>
+									<span>US $ ${productVO.price }</span>
 									<label>Quantity:</label>
-									<input type="text" value="3" />
+									<input type="text" value="1" />
 									<button type="button" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										Add to cart
+										<a href="addCart?id=${sessionId}&productId=${productVO.id}" ></i>카트에 담기</a>
 									</button>
 								</span>
-								<p><b>Availability:</b> In Stock</p>
-								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> E-SHOPPER</p>
-								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+								<p><b>카테고리:</b> ${productVO.category} </p>
+								<p><b>브랜드:</b> ${productVO.brandName}</p>
+								
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
@@ -422,96 +393,7 @@
 						</div>
 					</div><!--/category-tab-->
 					
-					<div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">recommended items</h2>
-						
-						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="item active">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-							  </a>
-							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							  </a>			
-						</div>
-					</div><!--/recommended_items-->
+					
 					
 				</div>
 			</div>

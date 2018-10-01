@@ -35,36 +35,45 @@ import com.kwj.shoppingmall.vo.WishListVO;
 @SessionAttributes({"sessionId","sessionUsername"})
 public class WishListController {
 	
-private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
-	
-	@Autowired
-	private WishListDAO wishListDAO;
-	
-	@Autowired
-	private ProductDAO productDAO;
-	
-	@RequestMapping(value = "/admin/wishlist/list", method = RequestMethod.GET)
-		public String list( @RequestParam(value="id") String id,Model model) {
-		List<WishListVO> wishList = wishListDAO.selectList();
-		model.addAttribute("wishList", wishList);
-		return "admin/wishlist/list";
+	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
+		
+		@Autowired
+		private WishListDAO wishListDAO;
+		
+		@Autowired
+		private ProductDAO productDAO;
+		
+		@RequestMapping(value = "/admin/wishlist/list", method = RequestMethod.GET)
+			public String list( @RequestParam(value="id") String id,Model model) {
+			
+			List<WishListVO> wishListVO = wishListDAO.select(id);
+			model.addAttribute("wishListVO", wishListVO);
+			return "admin/wishlist/list";
+		}	
+		
+		@RequestMapping(value = "/admin/wishlist/doAdd", method = RequestMethod.GET)
+		public String doAdd( @RequestParam(value="id") String id,
+				@RequestParam(value="productId") int productId,
+				Model model) {
+		WishListVO wishListVO = new WishListVO();
+		ProductVO productVO = productDAO.select(productId);
+		wishListVO.setUserId(id);
+		wishListVO.setColor(productVO.getColor());
+		wishListVO.setImage(productVO.getImage());
+		wishListVO.setPrice(productVO.getPrice());
+		wishListVO.setProductId(productId);
+		wishListVO.setSize(productVO.getSize());
+		wishListDAO.insert(wishListVO);
+		return "admin/wishlist/doAdd";
 	}	
-	
-	@RequestMapping(value = "/admin/wishlist/add", method = RequestMethod.GET)
-	public String add( @RequestParam(value="id") String id,
-			@RequestParam(value="productId") int productId,
-			Model model) {
-	WishListVO wishListVO = new WishListVO();
-	ProductVO productVO = productDAO.select(productId);
-	wishListVO.setUserId(id);
-	wishListVO.setColor(productVO.getColor());
-	wishListVO.setImage(productVO.getImage());
-	wishListVO.setPrice(productVO.getPrice());
-	wishListVO.setProductId(productId);
-	wishListVO.setSize(productVO.getSize());
-	wishListDAO.insert(wishListVO);
-	return "admin/wishlist/add";
-}	
+		
+		@RequestMapping(value = "/admin/wishlist/add", method = RequestMethod.GET)
+		public String add( @RequestParam(value="id") String id,
+				@RequestParam(value="productId") int productId,
+				Model model) {
+		
+		return "admin/wishlist/add";
+	}	
 
 	
 }

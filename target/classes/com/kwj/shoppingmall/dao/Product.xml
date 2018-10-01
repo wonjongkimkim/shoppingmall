@@ -27,6 +27,10 @@
         SELECT * FROM products WHERE id = #{id}
     </select>
     
+    <select id="selectByName" parameterType="String"  resultMap ="resultProductVO">
+        SELECT * FROM products WHERE name = #{name}
+    </select>
+    
     <update id="update" parameterType="com.kwj.shoppingmall.vo.ProductVO">
     	UPDATE products SET
     		name = #{name}

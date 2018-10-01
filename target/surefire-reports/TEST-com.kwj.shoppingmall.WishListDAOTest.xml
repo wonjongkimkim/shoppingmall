@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="5" failures="0" name="com.kwj.shoppingmall.WishListDAOTest" time="0.157" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_181\bin"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\kimwonjong\Desktop\STS\Fastshop"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\kimwonjong\Desktop\STS\Fastshop"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_181\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\KIMWON~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Users\kimwonjong\Desktop\STS\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3932060163293158011.tmp"/>
+    <property name="sun.jnu.encoding" value="MS949"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WinAVR-20100110\bin;C:\WinAVR-20100110\utils\bin;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\kimwonjong\Desktop\sts-bundle\sts-3.9.4.RELEASE;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\kimwonjong"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="MS949"/>
+    <property name="user.name" value="kimwonjong"/>
+    <property name="java.class.path" value="C:\Users\kimwonjong\Desktop\sts-bundle\sts-3.9.4.RELEASE\plugins\org.eclipse.m2e.maven.runtime_1.8.3.20180227-2135\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_181"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B compile package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ko"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_181\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_181\lib\resources.jar;C:\Program Files\Java\jre1.8.0_181\lib\rt.jar;C:\Program Files\Java\jre1.8.0_181\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_181\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_181\lib\jce.jar;C:\Program Files\Java\jre1.8.0_181\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_181\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_181\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\kimwonjong\Desktop\STS\Fastshop\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.kwj.shoppingmall.WishListDAOTest" name="selectList" time="0.009"/>
+  <testcase classname="com.kwj.shoppingmall.WishListDAOTest" name="delete" time="0.008"/>
+  <testcase classname="com.kwj.shoppingmall.WishListDAOTest" name="insert" time="0.079">
+    <error message="
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+### The error may involve WishList.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO wish_list ( productsid, quantity, usersid, color, size, brandname, image, price )    VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+; ]; Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;" type="org.springframework.dao.DuplicateKeyException">org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+### The error may involve WishList.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO wish_list ( productsid, quantity, usersid, color, size, brandname, image, price )    VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+; ]; Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:242)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy29.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at com.kwj.shoppingmall.dao.WishListDAO.insert(WishListDAO.java:17)
+	at com.kwj.shoppingmall.WishListDAOTest.insert(WishListDAOTest.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:392)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:52)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 41 more
+</error>
+    <system-out>INFO : jdbc.connection - 35. Connection opened
+INFO : jdbc.audit - 35. Connection.new Connection returned 
+INFO : jdbc.audit - 35. Connection.getAutoCommit() returned true
+INFO : jdbc.audit - 35. PreparedStatement.new PreparedStatement returned 
+INFO : jdbc.audit - 35. Connection.prepareStatement(SELECT * FROM products WHERE id = ?) returned net.sf.log4jdbc.PreparedStatementSpy@29d2d081
+INFO : jdbc.audit - 35. PreparedStatement.setInt(1, 6) returned 
+INFO : jdbc.sqlonly - SELECT * FROM products WHERE id = 6 
+INFO : jdbc.sqltiming - SELECT * FROM products WHERE id = 6  {executed in 1 msec}
+INFO : jdbc.audit - 35. PreparedStatement.execute() returned true
+INFO : jdbc.resultset - 35. ResultSet.new ResultSet returned 
+INFO : jdbc.audit - 35. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@40e4ea87
+INFO : jdbc.resultset - 35. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@58783f6c - Field level information: 
+	com.mysql.cj.result.Field@3a7b503d[catalog=fastshop,tableName=products,originalTableName=products,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@512d92b[catalog=fastshop,tableName=products,originalTableName=products,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF8]
+	com.mysql.cj.result.Field@62c5bbdc[catalog=fastshop,tableName=products,originalTableName=products,columnName=amount,originalColumnName=amount,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@7bdf6bb7[catalog=fastshop,tableName=products,originalTableName=products,columnName=color,originalColumnName=color,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF8]
+	com.mysql.cj.result.Field@1bc53649[catalog=fastshop,tableName=products,originalTableName=products,columnName=price,originalColumnName=price,mysqlType=4(FIELD_TYPE_FLOAT),sqlType=7,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@88d6f9b[catalog=fastshop,tableName=products,originalTableName=products,columnName=image,originalColumnName=image,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF8]
+	com.mysql.cj.result.Field@47d93e0d[catalog=fastshop,tableName=products,originalTableName=products,columnName=category,originalColumnName=category,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF8]
+	com.mysql.cj.result.Field@475b7792[catalog=fastshop,tableName=products,originalTableName=products,columnName=size,originalColumnName=size,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF8]
+	com.mysql.cj.result.Field@751e664e[catalog=fastshop,tableName=products,originalTableName=products,columnName=brandname,originalColumnName=brandname,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags= MULTI_KEY, charsetIndex=33, charsetName=UTF8]
+INFO : jdbc.resultset - 35. ResultSet.getType() returned 1003
+INFO : jdbc.resultset - 35. ResultSet.next() returned true
+INFO : jdbc.resultset - 35. ResultSet.getInt(id) returned 6
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getString(name) returned 샌들
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getInt(amount) returned 1
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getString(color) returned blue
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getFloat(price) returned 10000.0
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getString(image) returned Koala.jpg
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getString(category) returned 신발
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getString(size) returned 290
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultset - 35. ResultSet.getString(brandName) returned 나이키
+INFO : jdbc.resultset - 35. ResultSet.wasNull() returned false
+INFO : jdbc.resultsettable - |---|-----|-------|------|--------|----------|---------|-----|----------|
+INFO : jdbc.resultsettable - |id |name |amount |color |price   |image     |category |size |brandname |
+INFO : jdbc.resultsettable - |---|-----|-------|------|--------|----------|---------|-----|----------|
+INFO : jdbc.resultsettable - |6  |샌들   |1      |blue  |10000.0 |Koala.jpg |신발       |290  |나이키       |
+INFO : jdbc.resultsettable - |---|-----|-------|------|--------|----------|---------|-----|----------|
+INFO : jdbc.resultset - 35. ResultSet.next() returned false
+INFO : jdbc.resultset - 35. ResultSet.close() returned null
+INFO : jdbc.audit - 35. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@182b435b
+INFO : jdbc.audit - 35. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@4d0402b
+INFO : jdbc.audit - 35. PreparedStatement.getMoreResults() returned false
+INFO : jdbc.audit - 35. PreparedStatement.getUpdateCount() returned -1
+INFO : jdbc.audit - 35. PreparedStatement.isClosed() returned false
+INFO : jdbc.audit - 35. PreparedStatement.close() returned 
+INFO : jdbc.connection - 35. Connection closed
+INFO : jdbc.audit - 35. Connection.close() returned 
+INFO : jdbc.connection - 36. Connection opened
+INFO : jdbc.audit - 36. Connection.new Connection returned 
+INFO : jdbc.audit - 36. Connection.getAutoCommit() returned true
+INFO : jdbc.audit - 36. PreparedStatement.new PreparedStatement returned 
+INFO : jdbc.audit - 36. Connection.prepareStatement(INSERT INTO wish_list ( productsid, quantity, usersid, color, size, brandname, image, price )
+			VALUES ( ?, ?, ?, ?, ?, ?, ?, ?), 1) returned net.sf.log4jdbc.PreparedStatementSpy@7577b641
+INFO : jdbc.audit - 36. PreparedStatement.setInt(1, 6) returned 
+INFO : jdbc.audit - 36. PreparedStatement.setInt(2, 3) returned 
+INFO : jdbc.audit - 36. PreparedStatement.setString(3, &quot;twice&quot;) returned 
+INFO : jdbc.audit - 36. PreparedStatement.setString(4, &quot;blue&quot;) returned 
+INFO : jdbc.audit - 36. PreparedStatement.setString(5, &quot;290&quot;) returned 
+INFO : jdbc.audit - 36. PreparedStatement.setString(6, &quot;나이키&quot;) returned 
+INFO : jdbc.audit - 36. PreparedStatement.setString(7, &quot;Koala.jpg&quot;) returned 
+INFO : jdbc.audit - 36. PreparedStatement.setFloat(8, 10000.0) returned 
+INFO : jdbc.sqlonly - INSERT INTO wish_list ( productsid, quantity, usersid, color, size, brandname, image, price 
+) VALUES ( 6, 3, &apos;twice&apos;, &apos;blue&apos;, &apos;290&apos;, &apos;나이키&apos;, &apos;Koala.jpg&apos;, 10000.0) 
+ERROR: jdbc.audit - 36. PreparedStatement.execute() INSERT INTO wish_list ( productsid, quantity, usersid, color, size, brandname, image, price )
+			VALUES ( 6, 3, &apos;twice&apos;, &apos;blue&apos;, &apos;290&apos;, &apos;나이키&apos;, &apos;Koala.jpg&apos;, 10000.0)
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:392)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:52)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy29.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at com.kwj.shoppingmall.dao.WishListDAO.insert(WishListDAO.java:17)
+	at com.kwj.shoppingmall.WishListDAOTest.insert(WishListDAOTest.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+ERROR: jdbc.sqlonly - 36. PreparedStatement.execute() INSERT INTO wish_list ( productsid, quantity, usersid, color, size, brandname, image, price )
+			VALUES ( 6, 3, &apos;twice&apos;, &apos;blue&apos;, &apos;290&apos;, &apos;나이키&apos;, &apos;Koala.jpg&apos;, 10000.0)
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:392)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:52)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy29.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at com.kwj.shoppingmall.dao.WishListDAO.insert(WishListDAO.java:17)
+	at com.kwj.shoppingmall.WishListDAOTest.insert(WishListDAOTest.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+ERROR: jdbc.sqltiming - 36. PreparedStatement.execute() FAILED! INSERT INTO wish_list ( productsid, quantity, usersid, color, size, brandname, image, price )
+			VALUES ( 6, 3, &apos;twice&apos;, &apos;blue&apos;, &apos;290&apos;, &apos;나이키&apos;, &apos;Koala.jpg&apos;, 10000.0) {FAILED after 2 msec}
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry &apos;6-twice&apos; for key &apos;PRIMARY&apos;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:392)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:52)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy29.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at com.kwj.shoppingmall.dao.WishListDAO.insert(WishListDAO.java:17)
+	at com.kwj.shoppingmall.WishListDAOTest.insert(WishListDAOTest.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+INFO : jdbc.audit - 36. PreparedStatement.isClosed() returned false
+INFO : jdbc.audit - 36. PreparedStatement.close() returned 
+INFO : jdbc.connection - 36. Connection closed
+INFO : jdbc.audit - 36. Connection.close() returned 
+</system-out>
+    <system-err>Wed Sep 19 22:33:49 KST 2018 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Wed Sep 19 22:33:49 KST 2018 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+</system-err>
+  </testcase>
+  <testcase classname="com.kwj.shoppingmall.WishListDAOTest" name="select" time="0.04"/>
+  <testcase classname="com.kwj.shoppingmall.WishListDAOTest" name="update" time="0.021"/>
+</testsuite>

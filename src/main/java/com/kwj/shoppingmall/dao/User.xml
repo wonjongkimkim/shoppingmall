@@ -19,7 +19,7 @@
 	</insert>
 
     <select id="selectList" parameterType="java.util.HashMap" resultMap="resultUserVO">
-        SELECT * FROM users LIMIT 10
+        SELECT * FROM users
     </select>
     
     <select id="select" parameterType="String"  resultMap ="resultUserVO">

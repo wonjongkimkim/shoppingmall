@@ -7,6 +7,7 @@ import java.util.Map;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
+import com.kwj.shoppingmall.vo.UserVO;
 import com.kwj.shoppingmall.vo.WishListVO;
 
 public class WishListDAO extends SqlSessionDaoSupport{
@@ -19,6 +20,10 @@ public class WishListDAO extends SqlSessionDaoSupport{
 	public List<WishListVO> selectList(){
 		Map<String, String> paramMap = new HashMap<String, String>();
 		return getSqlSession().selectList("WishList.selectList" , paramMap);
+	}
+	
+	public List<WishListVO> select(String id) {
+		return getSqlSession().selectList("WishList.select", id);
 	}
 	
 	public void update(WishListVO wishListVO) {
